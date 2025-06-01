@@ -1,6 +1,17 @@
+import DefaultLayout from "./layouts/defaultLayout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
 
-  return <h1>Hello World</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route>
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 
 };
 
