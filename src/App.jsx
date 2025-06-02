@@ -1,5 +1,7 @@
 import DefaultLayout from "./layouts/defaultLayout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import DetailMovie from "./pages/DetailMovie";
 
 function App() {
 
@@ -7,8 +9,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
-          <Route index element={<h1>Homepage</h1>}></Route>
-          <Route path="/movies/:id" element={<h1>Dettaglio pagina</h1>}></Route>
+          <Route index element={<HomePage />}></Route>
+          <Route path="/movies/:id" element={<DetailMovie />}></Route>
 
         </Route>
       </Routes>
