@@ -13,6 +13,7 @@ const HomePage = () => {
                             <img src="https://picsum.photos/400/300" className='img-fluid' alt="" />
                         </div>
                         <div className='body'>
+                            <h4>Inception</h4>
                             <Link className='btn btn-primary' to="./movies/1">Leggi tutto</Link>
                         </div>
                     </div>
@@ -24,6 +25,7 @@ const HomePage = () => {
                             <img src="https://picsum.photos/400/300" className='img-fluid' alt="" />
                         </div>
                         <div className='body'>
+                            <h4>The Godfather</h4>
                             <Link className='btn btn-primary' to="./movies/2">Leggi tutto</Link>
                         </div>
                     </div>
@@ -35,6 +37,7 @@ const HomePage = () => {
                             <img src="https://picsum.photos/400/300" className='img-fluid' alt="" />
                         </div>
                         <div className='body'>
+                            <h4>Titanic</h4>
                             <Link className='btn btn-primary' to="./movies/3">Leggi tutto</Link>
                         </div>
                     </div>
@@ -45,6 +48,7 @@ const HomePage = () => {
                             <img src="https://picsum.photos/400/300" className='img-fluid' alt="" />
                         </div>
                         <div className='body'>
+                            <h4>The Matrix</h4>
                             <Link className='btn btn-primary' to="./movies/4">Leggi tutto</Link>
                         </div>
                     </div>
@@ -55,6 +59,7 @@ const HomePage = () => {
                             <img src="https://picsum.photos/400/300" className='img-fluid' alt="" />
                         </div>
                         <div className='body'>
+                            <h4>Interstellar</h4>
                             <Link className='btn btn-primary' to="./movies/5">Leggi tutto</Link>
                         </div>
                     </div>
