@@ -7,7 +7,6 @@ const Header = () => {
             <div className='container-fluid'>
                 <Link className='navbar-brand' to="/">Movies</Link>
             </div>
-
         </nav>
     )
 };

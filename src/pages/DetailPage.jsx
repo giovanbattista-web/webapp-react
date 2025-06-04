@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DetailMovie = () => {
+const DetailPage = () => {
     return (
         <>
             <div className='row gy-4'>
@@ -94,4 +94,4 @@ const DetailMovie = () => {
     )
 };
 
-export default DetailMovie;
+export default DetailPage;
