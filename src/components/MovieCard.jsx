@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieCard = (movie) => {
-    const { id, title, director, genre, image } = movie;
+const MovieCard = ({ film }) => {
+    const { id, title, director, genre, image } = film;
     return (
         <div className='col-12 col-md-6 col-lg-4 '>
             <div className='card'>
@@ -11,7 +11,7 @@ const MovieCard = (movie) => {
                 </div>
                 <div className='card-body'>
                     {title}
-                    <Link className='btn btn-primary' to={`/films/${movies.id}`}>Leggi tutto</Link>
+                    <Link to={`/films/${id}`}>Leggi tutto</Link>
                 </div>
             </div>
         </div>
