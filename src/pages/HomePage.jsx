@@ -1,28 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
+import axios from 'axios';
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
+
     const fetchMovies = () => {
-        axios.get('http://127.0.0.1:3000/films').then((resp) => {
+        axios.get('http:localhost:3000/films/').then((resp) => {
             console.log(resp.data);
-        }).catch((err) => {
-            console.log(err);
+            setMovies(resp.data);
         })
+            .catch((err) => {
+                console.log(error)
+            })
     };
 
     useEffect(() => {
-        fetchMovies();
-    }, []);
-    const { id, title, director, genre, image } = movies;
+        fetchMovies()
+    }, [])
+
     return (
         <>
             <h1 className='text-primary'>Movies</h1>
             <h2><i>The movie community</i></h2>
-            <div className='row gy-4'>
+            <div className='row mt4- gy-4'>
                 {movies.map((movie) => (
                     <MovieCard film={movie} key={movie.id} />
                 ))}
