@@ -7,7 +7,7 @@ const HomePage = () => {
     const [movies, setMovies] = useState([]);
 
     const fetchMovies = () => {
-        axios.get('http:localhost:3000/films/').then((resp) => {
+        axios.get('http://localhost:3000/films/').then((resp) => {
             console.log(resp.data);
             setMovies(resp.data);
         })
