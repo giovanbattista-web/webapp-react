@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
 import axios from 'axios';

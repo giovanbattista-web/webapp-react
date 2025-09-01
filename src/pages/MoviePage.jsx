@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -40,6 +39,8 @@ const MoviePage = () => {
                         </div>
                         <div className='row gy-4'>
                             <div className='col-12'>
+                                <h1>Titolo</h1>
+                                <p>Altre informazioni</p>
                                 <div className='d-flex justify-content-between'>
                                     <h3>Community Reviews</h3>
                                 </div>
