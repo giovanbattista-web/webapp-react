@@ -72,7 +72,7 @@ const ReviewsForm = ({ movie_id, reloadReviews }) => {
                         </textarea>
                     </div>
                     <div className='form-group'>
-                        <button className="btn btn-main" type="submit">Save review</button>
+                        <button className="btn btn-main bg-primary text-white" type="submit">Save review</button>
                     </div>
                 </form>
             </div>
