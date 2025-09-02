@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ReviewCard from '../components/ReviewCard';
-import reviewForm from '../components/reviewForm';
+import ReviewsForm from '../components/ReviewsForm';
 import GlobalContext from '../context/globalContext';
 import { useContext } from 'react';
 import Loader from '../components/Loader';
@@ -60,7 +60,7 @@ const MoviePage = () => {
                 </div>
                 <div className='row'>
                     <div className='col-12'>
-                        <reviewForm movie_id={movie.id} updateReviews={() => { fetchFilm() }} />
+                        <ReviewsForm movie_id={movie.id} updateReviews={() => { fetchFilm() }} />
                     </div>
                 </div>
             </div>
