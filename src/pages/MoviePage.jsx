@@ -58,12 +58,8 @@ const MoviePage = () => {
                         <ReviewCard review={review} key={review.id} />
                     ))}
                 </div>
-                <div className='row'>
-                    <div className='col-12'>
-                        <ReviewsForm movie_id={movie.id} updateReviews={() => { fetchFilm() }} />
-                    </div>
-                </div>
             </div>
+            <ReviewsForm movie_id={movie.id} reloadReviews={fetchFilm} />
         </>
     )
 };
