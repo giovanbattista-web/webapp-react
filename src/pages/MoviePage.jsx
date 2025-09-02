@@ -3,17 +3,28 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ReviewCard from '../components/ReviewCard';
+import reviewForm from '../components/reviewForm';
+import GlobalContext from '../context/globalContext';
+import { useContext } from 'react';
+import Loader from '../components/Loader';
+
+
 
 const MoviePage = () => {
     const { id } = useParams()
     const [movie, setMovie] = useState({});
+    const [reviews, setReviews] = useState([]);
+    const { isLoading, setIsLoading } = useContext(GlobalContext);
 
     const fetchFilm = () => {
-        axios.get(`http://localhost:3000/api/films/${id}`).then((resp) => {
-            setMovie(resp.data);
+        setIsLoading(true);
+        axios.get(`http://localhost:3000/api/films/${id}`).then((response) => {
+            setMovie(response.data);
+            setReviews(response.data.reviews);
+            setIsLoading(false);
         })
             .catch((err) => {
-                console.log(err)
+                console.log(err);
             })
     };
 
@@ -23,28 +34,35 @@ const MoviePage = () => {
 
     return (
         <>
-            <div className='col-12 col-md-6 col-lg-4'>
-                <img src={movie.image} className='img-fluid' alt="" />
-            </div>
-            <div className='col-12 col-md-6 col-lg-8'>
-                <h1>{movie.title}</h1>
-                <p>{movie.director}</p>
-                <p>{movie.genre}</p>
-                <p>{movie.abstract}</p>
-            </div>
-            <div className='row gy-4'>
-                <div className='col-12'>
-                    <h1>Titolo</h1>
-                    <p>Altre informazioni</p>
-                    <div className='d-flex justify-content-between'>
-                        <h3>Community Reviews</h3>
+            <div className='container'>
+                <div className='row my-3'>
+                    <div className='col-12'>
+                        <h2>Movie details</h2>
                     </div>
                 </div>
-                {movie.map((film) => {
-                    return (
-                        <ReviewCard key={`review-${review.id}`} review={review} />
-                    )
-                })}
+                <div className='row mb-3'>
+                    <div className='col-12 col-md-6 col-lg-4'>
+                        <img src={movie.image} className='img-fluid' alt={movie.title} />
+                    </div>
+                    <div className='col-12 col-md-6 col-lg-8'>
+                        <h3 className='mb-3'>Title : {movie.title}</h3>
+                        <p>Director : {movie.director}</p>
+                        <p>Genre : {movie.genre}</p>
+                        <p>Release Year : {movie.release_year}</p>
+                        <p>Abstract : {movie.abstract}</p>
+                        <p>Total reviews : {reviews.length}</p>
+                    </div>
+                </div>
+                <div className='row'>
+                    {reviews.map(review => (
+                        <ReviewCard review={review} key={review.id} />
+                    ))}
+                </div>
+                <div className='row'>
+                    <div className='col-12'>
+                        <reviewForm movie_id={movie.id} updateReviews={() => { fetchFilm() }} />
+                    </div>
+                </div>
             </div>
         </>
     )

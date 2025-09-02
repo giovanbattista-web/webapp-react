@@ -1,13 +1,13 @@
+import React from "react";
 const ReviewCard = ({ review }) => {
-    const { name, vote, text } = review;
     return (
-        <div className='col-12'>
-            <div className='card p-4'>
-                <p>{name}</p>
-                <p>{vote}</p>
-                <p>{text}</p>
+        <>
+            <div className='col-12 card p-3'>
+                <p>Author : {review.name}</p>
+                <p>Vote : {review.vote}</p>
+                <p>Review : {review.text} </p>
             </div>
-        </div>
+        </>
     )
 };
 
