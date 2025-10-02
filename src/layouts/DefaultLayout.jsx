@@ -1,6 +1,4 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom'; // OUTLET CI SERVE DA SEGNAPOSTO CIOE' IL CONTENUTO DELLE PAGINE
-// VA ALL'INTERNO DI OUTLET O MEGLIO SOSTITUIRSI
+import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 import GlobalContext from '../context/globalContext';
 import { useContext } from 'react';

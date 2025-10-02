@@ -1,28 +1,21 @@
-import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 
 const ReviewsForm = ({ movie_id, reloadReviews }) => {
-    // DEFINIZIONE DEI VALORI INIZIALI DELLA FORM 
     const initialData = {
         name: "",
         text: "",
         vote: ""
     };
-    // DEFINISCO LA VARIABILE DI STATO FORMDATA
+
     const [formData, setFormData] = useState(initialData);
 
-    // DEFINIZIONE DELLA FUNZIONE CHE MI CAMBIA I VALORI DEI CAMPI INPUT
     const setFieldValue = (e) => {
         const { value, name } = e.target
 
-        // DESTRUTTURAZIONE DI e.target
-        // VADO A SOSTITUIRE A formData UN OGGETTO CHE HA GLI STESSI CAMPI DI PRIMA MA VADO A SOSTITUIRE I VALORI
-        // UTILIZZANDO LA CHIAVE DINAMICA DATA DA name 
         setFormData({ ...formData, [name]: value })
     }
 
-    // METODO CHE EFFETTUA LA CHIAMATA AJAX PER SALVARE LA RECENSIONE
     const handleSubmit = (e) => {
         e.preventDefault();
 
