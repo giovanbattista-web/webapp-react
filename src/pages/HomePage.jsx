@@ -1,10 +1,9 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
 import axios from 'axios';
 import GlobalContext from '../context/globalContext';
 import { useContext } from 'react';
-import Loader from '../components/Loader';
+
 
 
 const HomePage = () => {
