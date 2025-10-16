@@ -5,7 +5,7 @@ const Header = () => {
         <>
             <nav className='navbar bg-body-secondary'>
                 <div className='container'>
-                    <Link to="/" className='navbar-brand text-dark'>Movies</Link>
+                    <Link to="/" className='navbar-brand text-dark btn-primary fw-bold fs-3 ps-2'>Movies</Link>
                 </div>
             </nav>
         </>

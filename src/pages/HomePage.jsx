@@ -29,9 +29,9 @@ const HomePage = () => {
 
     return (
         <>
-            <div className='container'>
-                <h1 className='text-primary'>Movies</h1>
-                <h2><i>The movie community</i></h2>
+            <div className='container text-white'>
+                <h2 className='pt-5 fs-1'><i>The movie community</i></h2>
+                <p className='fs-5 pb-4'>Every movie is a journey into the unknown, with a ticket to emotion</p>
                 <div className='row gy-4'>
                     {movies.map((movie) => (
                         <MovieCard movie={movie} key={movie.id} />

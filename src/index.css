@@ -1,5 +1,17 @@
 body {
-    background-color: grey;
+    background-color: #1A1D23;
     margin: 0;
     padding: 0;
+}
+
+.btn-main {
+    background-color: #1A1D23;
+}
+
+.card {
+    border: none;
+}
+
+.me-35 {
+    padding-right: 35px;
 }
