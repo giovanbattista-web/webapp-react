@@ -39,7 +39,7 @@ const ReviewsForm = ({ movie_id, reloadReviews }) => {
                             <input type="text"
                                 className='form-control'
                                 name="name"
-                                placeholder='name'
+                                placeholder='nome'
                                 required
                                 value={formData.name}
                                 onChange={setFieldValue}
